@@ -1,0 +1,73 @@
+/* Main Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #28a745; /* Green theme */
+  color: white;
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Links List */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center; /* Ensures inputs and text align vertically */
+}
+
+.navbar-links a, 
+.navbar-links li {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Admin Link Styling (Yellow) */
+.admin-link {
+  color: #ffc107 !important; 
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-link:hover {
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
+}
+
+/* The Dotted Password Input */
+.admin-password-input {
+  border: 2px solid #ffc107; /* Matches the yellow Admin link */
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: 100px;
+  outline: none;
+  font-size: 14px;
+  background-color: white;
+  color: #333; /* Dark text for readability */
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-password-input:focus {
+  width: 140px;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.8);
+}
+
+/* Optional: Placeholder styling */
+.admin-password-input::placeholder {
+  color: #888;
+  font-size: 12px;
+}

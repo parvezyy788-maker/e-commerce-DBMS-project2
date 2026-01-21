@@ -1,0 +1,106 @@
+/* Animated background jo colors change karega */
+.discount-wrapper {
+    background: linear-gradient(-45deg, #121212, #1a472a, #000000, #28a745);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.discount-content {
+    flex: 1;
+}
+
+/* Font size ko thora sleek aur professional kiya hai */
+.typing-text {
+    color: #ffffff;
+    font-size: 1.8rem; /* Pehle se chota aur elegant */
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.cursor {
+    color: #28a745;
+    font-weight: bold;
+    animation: blink 0.7s infinite;
+}
+
+/* Rotating Gol Box with Glow */
+.rotating-box {
+    width: 130px;
+    height: 130px;
+    background: rgba(40, 167, 69, 0.15);
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid #28a745;
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.6), inset 0 0 20px rgba(40, 167, 69, 0.4);
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Bahar wala rotating ring */
+.rotating-box::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #28a745;
+    border-radius: 50%;
+    animation: rotate 8s linear infinite;
+}
+
+.discount-badge {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.discount-badge span {
+    font-size: 1.8rem;
+    font-weight: 900;
+    display: block;
+    color: #fff;
+    text-shadow: 0 0 10px #28a745;
+}
+
+.discount-badge p {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #28a745;
+}
+
+/* Floating Animation */
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
